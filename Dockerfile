@@ -1,7 +1,7 @@
 FROM node:alpine
 
 # 容器默认时区为UTC，如需使用上海时间请启用以下时区设置命令
-# RUN apk add tzdata && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo Asia/Shanghai > /etc/timezone
+RUN apk add tzdata && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo Asia/Shanghai > /etc/timezone && apk del
 
 # 使用 HTTPS 协议访问容器云调用证书安装
 # RUN apk add ca-certificates
@@ -28,7 +28,11 @@ RUN pnpm install
 COPY . /app
 
 # 执行编译命令
-CMD ["npm", "run", "build"]
+CMD npm run build
+
+# debug
+RUN pwd
+RUN ls -l
 
 # 执行启动命令
-CMD ["npm", "start"]
+CMD npm start

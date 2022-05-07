@@ -1,5 +1,5 @@
 import { DataSource } from 'typeorm';
-import { MYSQL_OPTIONS }from '../config';
+import { MYSQL_OPTIONS } from '../config';
 
 const { MYSQL_HOST, MYSQL_PORT, MYSQL_USERNAME, MYSQL_PASSWORD, MYSQL_DATABASE, MYSQL_SYNC } = MYSQL_OPTIONS;
 

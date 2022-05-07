@@ -1,3 +1,4 @@
+import { join} from 'path';
 import { DataSource } from 'typeorm';
 import { MYSQL_OPTIONS } from '../config';
 
@@ -11,11 +12,12 @@ const mysqlDataSource = new DataSource({
 	username: MYSQL_USERNAME,
 	password: MYSQL_PASSWORD,
 	database: MYSQL_DATABASE,
-	entities: ['**/*.entity{.ts,.js}'],
+	entities: [join(__dirname, '../**/*.entity{.ts,.js}')],
 	synchronize: MYSQL_SYNC,
 });
 
 async function init () {
+	console.log('Connect MySQL...');
 	mysqlDataSource
 		.initialize()
 		.then(() => console.log('mysql connect success.'))

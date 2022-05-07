@@ -28,7 +28,7 @@ RUN pnpm install
 COPY . /app
 
 # 执行编译命令
-CMD ["npm", "build"]
+CMD ["npm", "run", "build"]
 
 # 执行启动命令
 CMD ["npm", "start"]

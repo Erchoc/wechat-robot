@@ -1,0 +1,77 @@
+{
+  // http://json.schemastore.org/tsconfig
+  "compilerOptions": {
+    // 严格模式
+    "strict": true,
+    // 根目录
+    "baseUrl": "./",
+    // 编译到哪里
+    "outDir": "./dist",
+    // 线上运行版本版本
+    "target": "ES2017",
+    // 模块加载方案
+    "module": "commonjs",
+    // 支持线上调试
+    "sourceMap": false,
+    // 产出声明文件
+    "declaration": false,
+    // 编译 JS 文件
+    "allowJs": false,
+    // 编译报错美化
+    "pretty": true,
+    // 使用 tslib 函数库
+    "importHelpers": true,
+    // 编译出错就不产出 JS
+    "noEmitOnError": true,
+    // 移除注释代码
+    "removeComments": true,
+    // 允许导入JSON文件
+    "resolveJsonModule": true,
+    // 实验性装饰器
+    "experimentalDecorators": true,
+    // 实验性元数据
+    "emitDecoratorMetadata": true,
+    // 允许默认导入 
+    "allowSyntheticDefaultImports": true,
+    // (严格模式)禁止使用隐式 any
+    // "noImplicitAny": true,
+    // (严格模式)禁止 this 指向 any
+    // "noImplicitThis": true,
+    // (严格模式)null/undefined 检测
+    // "strictNullChecks": true,
+    // (严格模式)译追加 use strict 语句
+    // "alwaysStrict": true,
+    // (严格模式)严格检查函数的参数类型
+    // "strictFunctionTypes": true,
+    // (严格模式)构造函数要初始化类属性
+    // "strictPropertyInitialization": true,
+    // (eslint)禁止变量未使用
+    // "noUnusedLocals": true,
+    // 禁止标签未使用
+    // "allowUnusedLabels": false,
+    // 允许函数参数未使用
+    // "noUnusedParameters": true,
+    // 禁止定义但不运行的代码段
+    // "allowUnreachableCode": false,
+    // 跳过 d.ts 文件的类型检查
+    "skipLibCheck": true,
+    // import 转义
+    // "esModuleInterop": true,
+    // 跳过 lib.ts 库的类型检查
+    "skipDefaultLibCheck": true,
+    // 禁止 switch case 出现贯穿
+    "noFallthroughCasesInSwitch": true,
+    // 严格要求 class 属性必须初始化
+    "strictPropertyInitialization": false,
+    // 开启增量编译
+    "incremental": false,
+    // 路径别名
+    "paths": {
+      "@src/*": ["./src/*"],
+      "@core/*": ["./src/core/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@mysql/*": ["./src/mysql/*"],
+      "@config/*": ["./src/config/*"]
+    }
+  }
+}

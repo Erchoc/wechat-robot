@@ -1,23 +1,45 @@
 {
-  "name": "wxcloudrun-koa",
+  "name": "wechat-robot-koa",
   "version": "1.0.0",
-  "description": "微信云托管 koa 框架模板",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
+  "description": "",
+  "main": "main.js",
+  "license": "MIT",
+  "author": "longye <erchoc@163.com>",
+  "homepage": "https://github.com/Erchoc/wechat-robot#readme",
+  "directories": {
+    "test": "test"
   },
-  "author": "",
-  "license": "Apache-2.0",
-  "engines": {
-    "node": ">=12.0.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Erchoc/wechat-robot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Erchoc/wechat-robot/issues"
+  },
+  "scripts": {
+    "dev": "nodemon",
+    "test": "",
+    "build": "tsc",
+    "start": "node ./dist/main"
   },
   "dependencies": {
-    "body-parser": "^1.19.1",
+    "dotenv": "^16.0.0",
     "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
-    "koa-logger": "^3.2.1",
+    "koa-pino-logger": "^4.0.0",
     "koa-router": "^10.1.1",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.13.0"
+    "tslib": "^2.4.0",
+    "typeorm": "^0.3.6"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.13.4",
+    "@types/koa-bodyparser": "^4.3.7",
+    "@types/koa-pino-logger": "^3.0.1",
+    "@types/koa-router": "^7.4.4",
+    "@types/node": "^17.0.31",
+    "nodemon": "^2.0.16",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4"
   }
 }

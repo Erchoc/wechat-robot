@@ -28,11 +28,7 @@ RUN pnpm install
 COPY . /app
 
 # 执行编译命令
-CMD npm run build
-
-# debug
-RUN pwd
-RUN ls -l
+RUN npm run build
 
 # 执行启动命令
-CMD npm start
+CMD ["npm", "start"]

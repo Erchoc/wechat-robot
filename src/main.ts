@@ -2,7 +2,7 @@ import * as Koa from 'koa';
 import * as dotenv from 'dotenv';
 // @ts-ignore
 import * as logger from 'koa-pino-logger';
-import * as xmlParse from 'koa-bodyparser';
+import * as xmlParser from 'koa-xml-body';
 dotenv.config();
 import router from './routes';
 import { APP_PORT } from './config';
@@ -13,7 +13,11 @@ const server = new Koa();
 
 server
 	.use(logger())
-	.use(xmlParse())
+	.use(xmlParser({
+		xmlOptions: {
+			explicitArray: false
+		}
+	}))
 	.use(router.routes())
 	.use(router.allowedMethods());
 
